@@ -1,25 +1,32 @@
 #header{
-    background-image:url("Image/destinyback.jpg");
+    background-image:url("Image/destiny2.jpg");
     background-repeat: no-repeat;
+    background-size: 100%;
     text-align: center;
 }
-#section1{
-    background-image:url("Image/section1.jpg");
+body{
+    background-image: url("Image/destinyback.jpg");
     background-repeat: no-repeat;
+    background-size: 100%;
+}
+#section1{
+    background-image:url("Image/destinyback.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
     padding-bottom: 20%;
 }
 .lien{
     margin-left: 0.5%;
     float: right;
-    color: white;
+    color: darkorange;
 }
 
 #buylogo{
-    margin-left: 20%;
+    margin-left: 30%;
 }
 #info{
     display: block;
-    margin-left: 20%;
+    margin-left: 30%;
 }
 
 #section2 p{
@@ -34,5 +41,37 @@
     text-align: center;
 }
 footer{
+    margin-top: 10%;
+    background-color: lightgrey;
+    text-align: center;
+}
+
+#pseudo{
+    display: inline-block;
+    margin-bottom: 1%;
+    border-color: black;
+}
+#mdp{
+    display: inline-block;
+    border-color: black;
+}
+
+#connexion{
+    text-align: center;
+    background-color: antiquewhite;
+}
+#sectionaide1{
+    text-align: center;
+}
+
+#sectionaide2{
+    text-align: center;
+}
+ul{
+    margin-left: 45%;
+    max-width: 5% ;
+
+}
+#sectionaide3{
     text-align: center;
 }
