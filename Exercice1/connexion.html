@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
     <link rel="stylesheet"  href="style.css"/>
+    <script src="script.js"></script>
+
 </head>
 <header id="header">
     <a href="http://localhost:63342/Web%20&%20BdD/Exercice1/index.html?_ijt=ak98cg0m7oj9t0p45trpol0hfl"> <img id="download" src="Image/download.png" height="35" width="50" /></a>
@@ -12,18 +14,21 @@
     <a href="http://localhost:63342/Web%20&%20BdD/Exercice1/index.html?_ijt=ak98cg0m7oj9t0p45trpol0hfl"><img id="shop" src="Image/shop.png"  height="35" width="50"/></a>
     <a href="http://localhost:63342/Web%20&%20BdD/Exercice1/index.html?_ijt=ak98cg0m7oj9t0p45trpol0hfl"><img id="menu" src="Image/menu.jpg"  height="35" width="50"/></a>
     <a class="lien" href="connexion.html"> Connexion</a>
-    <a class="lien" href="aide.html"> Aide</a>
+    <a class="lien" id="aide" href="aide.html"> Aide</a>
 </header>
 <body id="connexion">
 <p>CONNEXION</p>
 <p>Créez vous un compte facilement car ça ne marche pas !</p>
-<form>
-    <label for="pseudo">Quel est votre nom d'utilisateur ?</label>
-    <input id="pseudo" required>
-    <br>
-    <label for="mdp">Quel est votre nom mot de passe ?</label>
-    <input id="mdp" required>
-    <button>Envoyer</button>
+<form method="get" action="index.html" onsubmit="return frOnSubmit()">
+    <div><label for="txtmail">Adresse mail :</label><input id="txtmail" name="mail" type="email"/></div>
+    <div><label for="txtmdp">Mot de passe :</label><input id="txtmdp" name="mdp" type="password"/></div>
+    <div><p>Vous êtes :</p></div>
+    <label>Un homme</label><input id="homme" name="homme" type="radio"/>
+    <label>Une femme</label><input id="femme" name="femme" type="radio"/>
+    <label>Autre chose</label><input id="other" name="other" type="radio"/>
+    <div><label for="txtbirthday">Date de naissance :</label><input id="txtbirthday" name="birthday" type="date"/></div>
+    <div><label for="txtpseudo">Nom d'utilisateur :</label><input id="txtpseudo"/></div>
+    <button id="send"type="submit">Envoyer</button><button id="reset">Réinitialiser</button>
 </form>
 </body>
 <footer id="footer">
