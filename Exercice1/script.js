@@ -1,3 +1,12 @@
+var user =
+    {
+        mail : document.getElementById("txtmail"),
+        mdp : document.getElementById("txtmdp"),
+        birthday : document.getElementById("txtbirthday"),
+        pseudo : document.getElementById("txtpseudo"),
+    };
+
+
 function frOnSubmit()
 {   var valide = false;
 
@@ -6,7 +15,7 @@ function frOnSubmit()
         if(valideFormat()===true)
         {
             valide = true;
-            Saisir();
+            onLoad();
         }
 
         return valide;
@@ -16,9 +25,29 @@ function frOnSubmit()
 function onLoad()
 {
     var a = document.getElementById("aide");
+    var b = document.getElementById("connexion");
+    var c = document.getElementById("index");
     var lien = document.location;
     lien = lien.href.split("?");
     a.href += "?" + lien[1];
+    b.href += "?" + lien[1];
+    c.href += "?" + lien[1];
+    var infos = lien[1].split("&");
+
+    for(var i = 0; i < infos.length; i++)
+    {
+        var temp = infos[i].split("=");
+        user[temp[0]] = temp[1].split("%40")[0];
+    }
+    if(lien[1].indexOf("mail") !== -1 )
+    {
+        document.getElementById("connexion").innerHTML = "Modifier les informations";
+        document.getElementById("bonjour").innerHTML = "Bonjour " + user.mail;
+        document.getElementById("txtmail").innerHTML = user.mail;
+        document.getElementById("txtmdp").innerHTML = user.mdp;
+        document.getElementById("txtbirthday").innerHTML = user.birthday;
+        document.getElementById("txtpseudo").innerHTML = user.pseudo;
+    }
 }
 
 

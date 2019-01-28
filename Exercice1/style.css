@@ -3,21 +3,21 @@
     background-repeat: no-repeat;
     background-size: 100%;
     text-align: center;
+    padding-bottom: 5%;
 }
 body{
-    background-image: url("Image/sec1back.jpg");
+    background-image: url("Image/destcleanwhite.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 #section1{
-    background-image:url("Image/sec1back.jpg");
+    background-image: url("Image/destcleanwhite.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    padding-bottom: 17%;
+    padding-bottom: 8%;
 }
 .lien{
     margin-left: 0.5%;
-    position: relative;
     float: right;
     color: darkorange;
 }
@@ -29,14 +29,14 @@ body{
 #info{
     display: block;
     position: relative;
-    margin-top: 5%;
     margin-left: 20%;
 }
 
 #section2 p{
     margin-left: 5%;
     text-align: center;
-    color: antiquewhite;
+    color: darkmagenta;
+    font-family: "Arial Black";
     display: inline-block;
     cursor: Pointer;
     max-width: 25%;
@@ -61,24 +61,32 @@ footer{
     border-color: black;
 }
 
-#connexion{
+#bodyco{
     text-align: center;
     background-color: antiquewhite;
 }
 #sectionaide1{
     text-align: center;
+    color : ivory;
+    font-family: "Arial Black";
 }
 
 #sectionaide2{
     text-align: center;
+    color : ivory;
+    font-family: "Arial Black";
 }
 ul{
+    color : ivory;
+    font-family: "Arial Black";
     margin-left: 45%;
     max-width: 5% ;
 
 }
 #sectionaide3{
     text-align: center;
+    color : ivory;
+    font-family: "Arial Black";
 }
 #download{
     position: relative;
