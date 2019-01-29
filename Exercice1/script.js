@@ -1,10 +1,4 @@
-var user =
-    {
-        mail : document.getElementById("txtmail"),
-        mdp : document.getElementById("txtmdp"),
-        birthday : document.getElementById("txtbirthday"),
-        pseudo : document.getElementById("txtpseudo"),
-    };
+
 
 
 function frOnSubmit()
@@ -29,24 +23,39 @@ function onLoad()
     var c = document.getElementById("index");
     var lien = document.location;
     lien = lien.href.split("?");
-    a.href += "?" + lien[1];
+    if (lien.indexOf("?"))
+    {
+        var infos = lien[1].split("&");
+    }
+
+    var user = new Object()
+
+        user.mail = infos[0].split("=")[1],
+        user.mdp = infos[1].split("=")[1],
+        user.birthday = infos[3].split("=")[1],
+        user.pseudo = document.getElementById("txtpseudo");
+
+    user.mail = user.mail.replace("%40","@");
+   a.href += "?" + lien[1];
     b.href += "?" + lien[1];
     c.href += "?" + lien[1];
-    var infos = lien[1].split("&");
+
 
     for(var i = 0; i < infos.length; i++)
     {
         var temp = infos[i].split("=");
         user[temp[0]] = temp[1].split("%40")[0];
     }
-    if(lien[1].indexOf("mail") !== -1 )
-    {
+
+
+    if (lien.indexOf("?")) {
         document.getElementById("connexion").innerHTML = "Modifier les informations";
         document.getElementById("bonjour").innerHTML = "Bonjour " + user.mail;
-        document.getElementById("txtmail").innerHTML = user.mail;
-        document.getElementById("txtmdp").innerHTML = user.mdp;
-        document.getElementById("txtbirthday").innerHTML = user.birthday;
-        document.getElementById("txtpseudo").innerHTML = user.pseudo;
+
+        document.getElementById("txtmail").value = user.mail; //Pourquoi ça ne marche pas ?
+        document.getElementById("txtmdp").value = user.mdp;
+        document.getElementById("txtbirthday").value = user.birthday;
+        document.getElementById("txtpseudo").value = user.pseudo;
     }
 }
 
