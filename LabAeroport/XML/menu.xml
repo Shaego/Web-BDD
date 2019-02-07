@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<liens>
+    <lien>
+        <Francais>Regarder les avions</Francais>
+        <Anglais>Watch Planes</Anglais>
+        <URL>https://www.esky.com/radar/</URL>
+    </lien>
+    <lien>
+        <Francais>Réserver des vols</Francais>
+        <Anglais>Flight Booking</Anglais>
+        <URL>https://www.google.com/flights</URL>
+    </lien>
+    <lien>
+        <Francais>Regarder accidents</Francais>
+        <Anglais>Watch Crashes</Anglais>
+        <URL>https://www.youtube.com/watch?v=3r9YlB1a5EI</URL>
+    </lien>
+</liens>

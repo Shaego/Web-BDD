@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<users>
+<user>
+    <nom>Plarde</nom>
+    <prenom>Naoh</prenom>
+    <mail>RocketPlayerDuSaguenay@bing.caca</mail>
+    <password>florajetaime</password>
+</user>
+<user>
+    <nom>Chamberlando</nom>
+    <prenom>Javier</prenom>
+    <mail>JavierElMexicano@W3Schools.ca</mail>
+    <password>LaBibleDInternet</password>
+</user>
+<user>
+    <nom>Bouba</nom>
+    <prenom>Bouba</prenom>
+    <mail>lepetitourson@php.fr</mail>
+    <password>12345678abc</password>
+</user>
+<user>
+    <nom>Ross</nom>
+    <prenom>Bob</prenom>
+    <mail>mail</mail>
+    <password>123</password>
+</user>
+</users>

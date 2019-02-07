@@ -1,0 +1,87 @@
+html {
+    height: 100%;
+}
+
+header {
+    background-image: url("Image/sideplane.png");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    height: 30%;
+}
+
+#logo {
+    background-color: white;
+    padding-bottom: 0.5%;
+    border-radius: 20%;
+}
+#companie {
+    font-family: Garamond;
+    color: goldenrod;
+    background-color: indigo;
+    border-radius: 40%;
+    width: 25%;
+    margin: auto;
+}
+#slogan{
+    font-family: Garamond;
+    color: goldenrod;
+    background-color: indigo;
+    border-radius: 40%;
+    width: 15%;
+    margin: auto;
+}
+#userconnect {
+    background-color: aliceblue;
+    width: 16%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1%;
+}
+#usermdp {
+    background-color: aliceblue;
+    width: 16%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1%;
+}
+#userlangue{
+    background-color: aliceblue;
+    width: 5%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1%;
+}
+#subscribe {
+    margin-right: 1%;
+}
+body {
+    height: 80%;
+    margin-top:2%;
+    background-image: url("Image/Skybody.jpg");
+    text-align: center;
+}
+
+footer{
+    clear: both;
+    position: relative;
+    margin-top: 20%;
+    height: 10%
+}
+hr{
+    color:indigo;
+    border-style: wave;
+    border-radius: 30%;
+    border-width: 10px;
+}
+
+ol {
+    width: 15%;
+    text-align: left;
+}
+.menu {
+    font-size: xx-large;
+    background-color: aliceblue;
+    list-style-position: inside;
+    border-style: dotted;
+    border-color: indigo;
+}

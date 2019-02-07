@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title> Buzz Lightyear Airways</title>
-</head>
-<body >
+
 <section>
-    <ol title="Menu">
+    <ol>
         <?php
         $xml = simplexml_load_file("./XML/menu.xml") or die();
 
         foreach ($xml->children() as $lien) {
 
-            echo "<a href='$lien->URL' >$lien->Francais</a>";
+            if ($_COOKIE["user"] == "english" ){
+                echo "<a class='menu'  href='$lien->URL' >$lien->Anglais</a>.<br>";
+            }
+            elseif ($_COOKIE["user"] == "francais" ){
+                echo "<a class='menu'  href='$lien->URL' >$lien->Francais</a>.<br>";
+            }
+
         }
         ?>
     </ol>
@@ -20,5 +20,3 @@
 <section>
     <h1 id="slogan">To Infinity and Beyond</h1>
 </section>
-</body>
-</html>
