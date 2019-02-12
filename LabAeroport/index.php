@@ -4,14 +4,13 @@ session_start();
 
 $_SESSION["userConnect"] = "on";
 
-echo "la session est activée";
+echo "votre session est activée";
 
 
 $cookie_name = "user";
-$cookie_value = "Definitely Not Stalking You";
-$cookie_language = $_POST["userlangue"];
+$cookie_value = $_POST["userlangue"];
 $cookie_expire = time() + 86400*7;
-setcookie($cookie_name,  $cookie_language, $cookie_expire);
+setcookie($cookie_name,  $cookie_value, $cookie_expire);
 ?>
 <!DOCTYPE html>
 
@@ -28,7 +27,7 @@ setcookie($cookie_name,  $cookie_language, $cookie_expire);
     <?php include 'header.php'; ?>
 </header>
 <body>
-    <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
 </body>
 <footer>
     <?php include 'footer.php'; ?>

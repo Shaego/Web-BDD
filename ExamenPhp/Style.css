@@ -1,0 +1,23 @@
+body{
+    height: 100%;
+    text-align: center;
+    background: url("sky.jpg");
+    color: white;
+    padding: 10%;
+}
+label {
+    display: block;
+}
+
+input{
+    margin-top: 5px;
+}
+table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td{
+    border: groove black 2px;
+    background: rgba(128,128,128,0.5);
+}

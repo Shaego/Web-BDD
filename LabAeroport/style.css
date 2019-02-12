@@ -27,7 +27,7 @@ header {
     color: goldenrod;
     background-color: indigo;
     border-radius: 40%;
-    width: 15%;
+    width: 25%;
     margin: auto;
 }
 #userconnect {
@@ -77,6 +77,14 @@ hr{
 ol {
     width: 15%;
     text-align: left;
+}
+#section1{
+    float:left;
+    width:30%;
+    border-style: double;
+}
+#section2{
+    display:inline-block;
 }
 .menu {
     font-size: xx-large;

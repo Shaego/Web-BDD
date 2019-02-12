@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Aeroports>
+	<Aeroport>
+		<CodeAeroport>YUL</CodeAeroport>
+		<NomAeroport>Aeroport Pierre-Elliot Trudeau</NomAeroport>
+		<VilleAeroport>Montreal</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>YYZ</CodeAeroport>
+		<NomAeroport>Aeroport Lester B. Pearson</NomAeroport>
+		<VilleAeroport>Toronto</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>CDG</CodeAeroport>
+		<NomAeroport>Aeroport Charles-de-Gaulle</NomAeroport>
+		<VilleAeroport>Paris</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>AKL</CodeAeroport>
+		<NomAeroport>Aeroport d'Auckland</NomAeroport>
+		<VilleAeroport>Auckland</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>ATL</CodeAeroport>
+		<NomAeroport>Aeroport international Hartsfield-Jackson</NomAeroport>
+		<VilleAeroport>Atlanta</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>LAX</CodeAeroport>
+		<NomAeroport>Aeroport international de Los Angeles</NomAeroport>
+		<VilleAeroport>Los Angeles</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>YQB</CodeAeroport>
+		<NomAeroport>Aeroport Jean-Lesage</NomAeroport>
+		<VilleAeroport>Jean-Lesage</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>JFK</CodeAeroport>
+		<NomAeroport>Aeroport  John F. Kennedy</NomAeroport>
+		<VilleAeroport>New York</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>ORD</CodeAeroport>
+		<NomAeroport>Aeroport international O'Hare</NomAeroport>
+		<VilleAeroport>Chicago</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>LHR</CodeAeroport>
+		<NomAeroport>Aeroport Heathrow</NomAeroport>
+		<VilleAeroport>Londres</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>YBG</CodeAeroport>
+		<NomAeroport>Aeroport de Bagotville</NomAeroport>
+		<VilleAeroport>Saguenay</VilleAeroport>
+	</Aeroport>
+	<Aeroport>
+		<CodeAeroport>BOS</CodeAeroport>
+		<NomAeroport>Aeroport international Logan</NomAeroport>
+		<VilleAeroport>Boston</VilleAeroport>
+	</Aeroport>
+</Aeroports>
