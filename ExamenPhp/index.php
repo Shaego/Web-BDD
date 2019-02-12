@@ -13,7 +13,7 @@
 </header>
 <body>
 <table>
-<td>
+<td> //Les tableaux n'ont pas voulu se mettre comme sur tes screes (meme avec des br) nvm ! Bonne correction :)
 <?php
 $xml = simplexml_load_file("XMLAeroports.xml") or die();
 
