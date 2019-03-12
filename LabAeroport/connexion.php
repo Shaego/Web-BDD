@@ -2,7 +2,10 @@
 session_start();
 session_unset();
 session_destroy();
+
+
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +19,7 @@ session_destroy();
 </header>
 <body>
 <form method="post" action="index.php">
-    <div id="userconnect"><label for="txtuser">Nom d'utilisateur : </label><input id="txtuser" name="txtuser" type="text" required /></div>
+    <div id="username"> <label for="txtuser">Nom d'utilisateur : </label><input id="txtuser" name="txtuser" type="text" required /></div>
     <div id="usermdp"> <label for="txtmdp">Mot de passe : </label><input id="txtmdp" name="txtmdp" type="password" required /></div>
     <div id="userlangue"> <label for=rdlangue">Langue : </label><br>
         <input type="radio" name="userlangue" value="english">English<br>

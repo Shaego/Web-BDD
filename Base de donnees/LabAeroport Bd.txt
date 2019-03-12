@@ -1,0 +1,27 @@
+CREATE DATABASE IF NOT EXISTS BdAeroport;
+
+//Creation table
+
+USE BdAeroport;
+
+//Creation tblVol
+
+CREATE TABLE tblVol
+(
+noVol	char(5) NOT NULL,
+aeroportDepart	char(3) 	NOT NULL,
+aeroportArrivee	char(3) 	NOT NULL,
+heureDepart		time(6)		NOT NULL,
+heureArrivee	time(6)		NOT NULL,
+distanceToKm	smallint(6)	NOT NULL,
+dureeTotalePrevue tinyint(4)	NOT NULL,
+codeTypeAppareil	varchar(15)	NOT NULL,
+codeCie	char(2) 		NOT NULL
+);
+
+//Creation tblTypeAppareil
+
+CREATE TABLE tblTypeAppareil
+(
+
+);

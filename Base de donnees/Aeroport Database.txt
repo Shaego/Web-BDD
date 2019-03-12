@@ -1,0 +1,114 @@
+CREATE DATABASE IF NOT EXISTS BdAeroport;
+
+##Creation table
+
+USE BdAeroport;
+
+##Creation tblVol
+
+CREATE TABLE tblVol
+(
+	noVol				char(5) 	NOT NULL,
+	aeroportDepart		char(3) 	NOT NULL,
+	aeroportArrivee		char(3) 	NOT NULL,
+	heureDepart			time(6)		NOT NULL,
+	heureArrivee		time(6)		NOT NULL,
+	distanceToKm		smallint(6)	NOT NULL,
+	dureeTotalePrevue 	tinyint(4)	NOT NULL,
+	codeTypeAppareil	varchar(15)	NOT NULL,
+	codeCie				char(2) 	NOT NULL
+);
+
+##Creation tblTypeAppareil
+
+CREATE TABLE tblTypeAppareil
+(
+	codeTypeAppareil	varchar(15)	NOT NULL,
+    descTypeAppareil	varchar(20)	NOT NULL,
+    vitesseCroisiere	SMALLINT(6)	NOT NULL,
+    autonomieVol		SMALLINT(6)	NOT NULL,
+    nbSieges			SMALLINT(6)	NOT NULL
+    	
+);
+
+##Creation tblCompagnieAerienne
+
+CREATE TABLE tblCompagnieAerienne
+(
+    codeCie	char(2)		NOT NULL,
+    nomCie	varchar(50)	NOT NULL
+);
+
+##Creation tblClasseBillet
+
+CREATE TABLE tblClasseBillet
+(
+    codeClasse	char(2)		NOT NULL,
+    nomClasse 	varchar(20)	NOT NULL
+);
+
+##Creation tblClient
+
+CREATE TABLE tblClient
+(
+    noClient		int(11)			NOT NULL,
+    nomClient		varchar(25)		NOT NULL,
+    prenomClient	varchar(25) 	NOT NULL,
+    noTelClient		varchar(14)		NOT NULL,
+    adresseClient	varchar(50)		NOT NULL,
+    escompte		decimal(2,2)	NOT NULL
+);    
+
+##Creation tblBillet
+
+CREATE TABLE tblBillet
+(
+    noBillet		int(11)		NOT NULL,
+    noVol			char(5)		NOT NULL,
+    dateVole		date		NOT NULL,
+    noSiege			varchar(4)	NOT NULL,
+    codeClasse		char(2)		NOT NULL,
+    prixBillet		decimal(6,2)NOT NULL,
+    typeRepas		varchar(30)	NOT NULL,
+    noReservation	int(11)		NOT NULL
+);
+
+##Creation tblReservation
+
+CREATE TABLE tblReservation
+(
+    noReservation		int(11)		NOT NULL,
+    dateReservation		date		NOT NULL,
+    statutReservation	varchar(15)	NOT NULL,
+    modePaiement		varchar(20)	NOT NULL,
+    statutPaiement		varchar(9)	NOT NULL,
+    noClient 			int(11)		NOT NULL
+);
+
+##Creation tblPays
+
+CREATE TABLE tblPays
+(
+    codePays	char(2)	NOT NULL,
+    nomPays		varchar(50)	NOT NULL    
+);
+
+##Creation tblVille
+
+CREATE TABLE tblVille
+(
+    codeVille	char(3)		NOT NULL,
+    nomVille	varchar(50)	NOT NULL,
+    codePays	char(2)		NOT NULL
+);
+
+##Creation tblAeroport
+
+CREATE TABLE tblAeroport
+(
+    codeAeroport	char(3)		NOT NULL,
+    nomAeroport		varchar(50)	NOT NULL,
+    noTelAeroport	varchar(14)	NOT NULL,
+    HeureGmt		SMALLINT(6)	NOT NULL,
+    codeVille		char(3)		NOT NULL
+);

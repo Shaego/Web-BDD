@@ -20,9 +20,6 @@ setcookie($cookie_name,  $cookie_value, $cookie_expire);
     <title> Buzz Lightyear Airways</title>
     <link rel="stylesheet"  href="style.css"/>
 </head>
-<style>
-
-</style>
 <header id="header">
     <?php include 'header.php'; ?>
 </header>
