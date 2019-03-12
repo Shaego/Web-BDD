@@ -1,6 +1,6 @@
 
 <section id="section1">
-    <ol>
+
         <?php
         $servername = "localhost";
         $username = "root";
@@ -16,7 +16,7 @@
             die('Connexion échouée. Erreur :' .$e-> getMessage());
         }
 
-        $accueil = $conn->query('SELECT nomUsager FROM BdAeroport');
+        $accueil = $conn->query('SELECT nomUsager FROM tblUsager');
 
         while ($donnees = $accueil->fetch())
         {
@@ -24,7 +24,9 @@
         }
         $accueil->closeCursor();
         $conn = null;
-
+        ?>
+    <ol>
+        <?php
         $xml = simplexml_load_file("./XML/menu.xml") or die();
         foreach ($xml->children() as $lien) {
 
