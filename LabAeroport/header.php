@@ -3,15 +3,7 @@
     <h1 id="companie">BUZZ LIGHTYEAR AIRWAYS</h1>
     <?php
 
-    $xml = simplexml_load_file("./XML/user.xml") or die();
 
-    foreach ($xml->children() as $user) {
-
-        if ($_POST["txtuser"]== $user->mail && $_POST["txtmdp"]== $user->password){
-            echo "Bonjour ";
-            echo $_POST["txtuser"];
-        }
-    }
 
     echo '<a href="connexion.php" >Deconnexion</a>';
 
@@ -20,7 +12,10 @@
     $password = "mysql";
     $nom = $_POST["txtuser"];
     $pwd = $_POST["txtmdp"];
-    $connexion = false;
+    $prenom = $_POST["txtjustname"];
+    $nomFam = $_POST["txtuserlastname"];
+    $checkCo = $_POST["connexion"];
+    $checkInsc = $_POST["inscription"];
 
     try{
         $conn = new PDO("mysql:host=$servername; dbname=BdAeroport",$username, $password);
@@ -31,20 +26,21 @@
         die('Connexion échouée. Erreur :' .$e-> getMessage());
     }
 
+
+    if ($checkInsc !== null)
+     {
+        $donnees = "INSERT INTO tblUsager (nomUsager, pwdUsager, prenomUsager, nomUtilisateur, dateCreation)
+        VALUES ('$nom', '$pwd', '$prenom', '$nomFam', CURDATE())";
+         $conn->exec($donnees);
+     }
     $accueil = $conn->query('SELECT nomUtilisateur, prenomUsager FROM tblUsager WHERE nomUsager="'.$nom.'" AND pwdUsager="'.$pwd.'"');
 
-    while ($donnees = $accueil->fetch())
-    {
-
-        echo $donnees['nomUtilisateur'] .' ' .$donnees['prenomUsager'] .'<br/>';
+    if ($accueil ->rowCount() > 0) {
+        while ($donnees = $accueil->fetch()) {
+            echo $donnees['nomUtilisateur'] . $donnees['prenomUsager'] . '<br/>';
+        }
     }
-
-    if($accueil->rowCount() > 0)
-    {
-        $connexion = true;
-    }
-    elseif ( $accueil->rowCount() == 0)
-    {
+    else{
         header("Location: inscription.php");
     }
     $accueil->closeCursor();

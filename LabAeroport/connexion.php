@@ -2,7 +2,9 @@
 session_start();
 session_unset();
 session_destroy();
-
+$_POST["txtuser"] = null;
+$_POST["txtmdp"] = null;
+$_POST["txtuserlastname"] = null;
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@ session_destroy();
     <div id="userlangue"> <label for=rdlangue">Langue : </label><br>
         <input type="radio" name="userlangue" value="english">English<br>
         <input type="radio" name="userlangue" value="francais">Francais<br></div>
-    <button type="submit" id="subscribe">S'inscrire</button><button type="submit" id="connect">Se Connecter</button>
+    <button type="submit"  name="connexion" value="1" id="connect">Se Connecter</button>
 </form>
 </body>
 <footer>
