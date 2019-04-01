@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 13.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "CreationFakeBd_Baptiste_Bouillet", "CreationFakeBd_Baptiste_Bouillet\CreationFakeBd_Baptiste_Bouillet.ssmssqlproj", "{52371977-190B-4AEA-A459-DF1CB006E6ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52371977-190B-4AEA-A459-DF1CB006E6ED}.Default|Default.ActiveCfg = Default
+		{D363779E-8271-4647-B7ED-C15AEF214941}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

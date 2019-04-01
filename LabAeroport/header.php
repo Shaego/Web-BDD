@@ -3,6 +3,8 @@
     <h1 id="companie">BUZZ LIGHTYEAR AIRWAYS</h1>
     <?php
 
+    session_start();
+
 
 
     echo '<a href="connexion.php" >Deconnexion</a>';
@@ -33,11 +35,11 @@
         VALUES ('$nom', '$pwd', '$prenom', '$nomFam', CURDATE())";
          $conn->exec($donnees);
      }
-    $accueil = $conn->query('SELECT nomUtilisateur, prenomUsager FROM tblUsager WHERE nomUsager="'.$nom.'" AND pwdUsager="'.$pwd.'"');
+    $accueil = $conn->query('SELECT prenomUsager, nomUtilisateur FROM tblUsager WHERE nomUsager="'.$nom.'" AND pwdUsager="'.$pwd.'"');
 
     if ($accueil ->rowCount() > 0) {
         while ($donnees = $accueil->fetch()) {
-            echo $donnees['nomUtilisateur'] . $donnees['prenomUsager'] . '<br/>';
+            echo 'Bienvenue ' . ' ' .$donnees['prenomUsager'] .' ' .$donnees['nomUtilisateur'] . '<br/>';
         }
     }
     else{
