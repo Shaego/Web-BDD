@@ -1,7 +1,6 @@
 <?php
 session_start();
-session_unset();
-session_destroy();
+
 
 ?>
 
@@ -25,7 +24,7 @@ session_destroy();
     <div id="userlangue"> <label for=rdlangue">Langue : </label><br>
         <input type="radio" name="userlangue" value="english">English<br>
         <input type="radio" name="userlangue" value="francais">Francais<br></div>
-    <button type="submit" id="connect" name="inscription" value="1">S'inscrire</button>
+    <button type="submit" id="connect" name="inscription" value="1">S'inscrire</button><a href="connexion.php">Connection</a>
 </form>
 </body>
 <footer>
