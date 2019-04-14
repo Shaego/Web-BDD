@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 $_SESSION["userConnect"] = "on";
 
 echo "votre session est activée";

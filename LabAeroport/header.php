@@ -35,12 +35,12 @@ session_start();
         VALUES ('$nom', '$pwd', '$prenom', '$nomFam', CURDATE())";
          $conn->exec($donnees);
      }
-     if ($_POST["txtuser"] && $_POST["txtmdp"])
+     if (ISSET ($_POST["txtuser"]) &&  ISSET ($_POST["txtmdp"]))
      {
          $_SESSION["nom"] = $_POST["txtuser"];
          $_SESSION["pwd"] = $_POST["txtmdp"];
      }
-    $accueil = $conn->query('SELECT prenomUsager, nomUtilisateur FROM tblUsager WHERE nomUsager="'.$_POST["txtuser"].'" AND pwdUsager="'.$_POST["txtmdp"].'"');
+     $accueil = $conn->query('SELECT prenomUsager, nomUtilisateur FROM tblUsager WHERE nomUsager="'.$_SESSION["nom"].'" AND pwdUsager="'.$_SESSION["pwd"].'"');
 
     if ($accueil ->rowCount() > 0) {
         while ($donnees = $accueil->fetch()) {
@@ -48,10 +48,10 @@ session_start();
         }
 
     }
-    else {
-        header("Location: inscription.php");
+    elseif ($checkInsc === null)
+    {
+        header('location: inscription.php');
     }
     $accueil->closeCursor();
-    $conn = null;
 
     ?>

@@ -27,7 +27,9 @@ catch (PDOException $e)
     <?php include 'header.php'; ?>
 </header>
 <body>
-<?php include 'menu.php'; ?>
+    <?php
+    $allTickets = $conn->query( SELECT)
+    ?>
 </body>
 <footer>
     <?php include 'footer.php'; ?>

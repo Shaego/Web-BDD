@@ -1,9 +1,3 @@
-<?php
-session_start();
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +6,7 @@ session_start();
     <link rel="stylesheet" href="style.css">
 </head>
 <header id="header">
-    <img id="logo" src="Image/logoplane.png" height="50" width="60" />
-    <h1 id="companie">BUZZ LIGHTYEAR AIRWAYS</h1>
+    <?php include 'header.php'; ?>
 </header>
 <body>
 <form method="post" action="index.php">
@@ -28,7 +21,6 @@ session_start();
 </form>
 </body>
 <footer>
-    <p>Fait par Baptiste Bouillet</p>
-    <p>Contactez-nous : bouba1830343@etu.cegepjonquiere.ca</p>
+    <?php include 'footer.php'; ?>
 </footer>
 </html>

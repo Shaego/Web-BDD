@@ -1,3 +1,22 @@
+<?php
+session_start();
+$_SESSION["valeur"] = $codeEditeur;
+$servername = "localhost";
+$username = "root";
+$password = "mysql";
+$codeEditeur = $_POST["code"];
+$nomEditeur = $_POST["nom"];
+$villeEditeur = $_POST["ville"];
+$pays = $_POST["pays"];
+try{
+    $conn = new PDO("mysql:host=$servername; dbname=BdEdition",$username, $password);
+    $conn ->setAttribute( PDO:: ATTR_ERRMODE,  PDO:: ERRMODE_EXCEPTION);
+}
+catch (PDOException $e)
+{
+    die('Connexion échouée. Erreur :' .$e-> getMessage());
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,8 +25,16 @@
     </head>
     <body>
         <form action="Livres_par_editeur.php" method="post">
-            <label>Choisir un édtieur</label>
-            <select name="editeur">
+            <label>Choisir un éditeur</label>
+            <select name="nom">
+                <?php
+                $reponse = $conn->query('SELECT noEditeur, nomEditeur FROM tblEditeur');
+                while ($row = $reponse->fetch())
+                {
+                    echo "<option value='". $row['noEditeur']."'>" . $row['nomEditeur'] . "</option>";
+                }
+
+                ?>
             </select>
             <input type="submit" value="Rechercher">
         </form>

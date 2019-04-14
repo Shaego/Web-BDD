@@ -1,3 +1,17 @@
+<?php
+session_start();
+$servername = "localhost";
+$username = "root";
+$password = "mysql";
+try{
+    $conn = new PDO("mysql:host=$servername; dbname=BdEdition",$username, $password);
+    $conn ->setAttribute( PDO:: ATTR_ERRMODE,  PDO:: ERRMODE_EXCEPTION);
+}
+catch (PDOException $e)
+{
+    die('Connexion échouée. Erreur :' .$e-> getMessage());
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +31,23 @@
     <table>
         <tr><td>Magasin</td><td>Adresse</td><td>Livre</td></tr>
     </table>
+    <?php
+    //Join
+    $magasin = $conn->query('SELECT nomMag, rueMag FROM tblMagasin');
+    $livre = $conn->query('SELECT titreLivre FROM tblLivre');
+
+    while ($row = $magasin->fetch())
+    {
+        echo $row['nomMag'] ."<br>" .$row['rueMag']. "<br>";
+    }
+
+    $magasin->closeCursor();
+    while ($row = $livre->fetch())
+    {
+        echo $row['titreLivre']. "<br>";
+    }
+    $livre->closeCursor();
+    ?>
 </div>
 </body>
 </html>
