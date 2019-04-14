@@ -44,6 +44,7 @@ catch (PDOException $e)
     var_dump($airportTickets['noBillet']);
     echo $airportTickets['noBillet'] .'<br>';
 
+    $sommeTotale =$conn->query('SELECT SUM(')
 
     ?>
 </body>
