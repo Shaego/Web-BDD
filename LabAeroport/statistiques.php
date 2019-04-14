@@ -28,7 +28,23 @@ catch (PDOException $e)
 </header>
 <body>
     <?php
-    $allTickets = $conn->query( SELECT)
+    $allTickets = $conn->query( 'SELECT noVol, noBillet COUNT (noBillet) AS "Nombre billets vendus" FROM tblBillet GROUP BY noVol');
+    var_dump($allTickets['noBillet']);
+    echo $allTickets['noBillet'] .'<br>';
+
+    $usedTickets = $conn->query( 'SELECT noVol, noBillet COUNT (noBillet) AS "Nombre billets vendus" FROM tblBillet WHERE noBillet EXISTS GROUP BY noVol');
+    var_dump($usedTickets['noBillet']);
+    echo $usedTickets['noBillet'] .'<br>';
+
+    $airportTickets = $conn->query( 'SELECT codeAeroport, noBillet COUNT (noBillet) AS "Nombre billets vendus" FROM tblBillet WHERE noBillet  GROUP BY codeAeroport');
+    var_dump($airportTickets['noBillet']);
+    echo $airportTickets['noBillet'] .'<br>';
+
+    $moyenneVol = $conn->query( 'SELECT AVG(dureeTotalePrevu) AS "Duree Moyenne" FROM tblVol GROUP BY codeAeroport');
+    var_dump($airportTickets['noBillet']);
+    echo $airportTickets['noBillet'] .'<br>';
+
+
     ?>
 </body>
 <footer>
